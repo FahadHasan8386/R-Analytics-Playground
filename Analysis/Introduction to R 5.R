@@ -1,6 +1,9 @@
+getwd()
+setwd("E:/Repository/R-Analytics-Playground/Analysis")
 
+list.files()
 
-df_iris<-read.csv("Lab5/iris.csv",sep=",")
+df_iris<-read.csv("iris.csv",sep=",")
 colSums(is.na(df_iris))
 
 x<-df_iris$sepal_length
@@ -24,6 +27,11 @@ barplot(df_iris$sepal_length,main="sepal length",ylab = "Frequency")
 
 
 barplot(table(df_iris$species))
+
+
+barplot(table(df_iris$petal_width))
+
+boxplot(df_iris$sepal_length)
 
 pie(table(df_iris$species))
 
@@ -63,6 +71,7 @@ rug(df_iris$sepal_length, col="brown")
 
 boxplot(df_iris$sepal_length)
 
+boxplot(df_iris$petal_width)
 
 
 plot(df_iris$sepal_length,df_iris$sepal_width)
